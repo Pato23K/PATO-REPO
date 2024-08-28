@@ -6,10 +6,10 @@ This exercise will guide us to learn most of the html basic elements. This guide
 
 ### Basic structures
 
-- Add your **name** as the main title
-- Place your current job title and address
-- A small personal presentation stating how you want to be known.
-- Add your favorite quote
+- Add your **name** as the main title /
+- Place your current job title and address /
+- A small personal presentation stating how you want to be known. /
+- Add your favorite quote /
 - Add a subsection named **Background**
   - Add a small text talking about your background and main goal in life as a professional
   - Add a subsubsection named **Education**
