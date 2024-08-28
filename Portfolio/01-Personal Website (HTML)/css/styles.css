@@ -1,0 +1,46 @@
+body{
+    background-color: gray;
+}
+h2{
+    text-decoration: underline;
+    border-bottom: 3px dotted red;
+}
+
+h2:hover {
+    border-bottom: 6px dotted blue;
+}
+
+img{
+    width: 200px; 
+    }
+
+li{
+    text-decoration: overline;
+}
+
+.flags{
+    width: 100px;
+    border: 1px dotted red;
+}
+
+#sf{
+    background-color: gray;
+}
+
+.mex{
+    padding: 5px;
+    border-radius: 30%;
+}
+
+table{
+    border: 4px double blueviolet;
+}
+
+thead{
+    background-color: blue;
+    color: white
+}
+
+th{
+    color: white
+}
