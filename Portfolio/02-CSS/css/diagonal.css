@@ -1,3 +1,28 @@
 body {
     margin: 0;
 }
+
+.div1 {
+    background-color: blue;
+    border: 10px solid; /*To set the solid border of 10 px*/
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.div2 {
+    background-color: yellow;
+    border: 20px solid;
+    width: 200px;
+    height: 200px;  
+}
+
+.div3{
+    background-color: red;
+    border: 10px ridge;
+    width: 200px;
+    height: 200px;
+}
+table{
+    border-collapse: collapse;
+}

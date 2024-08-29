@@ -1,3 +1,28 @@
 body {
     margin: 0;
 }
+
+.div4 {
+    background-color: red;
+    border: 10px solid red;
+    width: 100px;
+    height: 100px;
+}
+
+.div5{
+    background-color: blue;
+    border: 10px solid blue;
+    width: 100px;
+    height: 100px;
+}
+
+.div6{
+    background-color: yellow;
+    border: 10px solid yellow;
+    width: 100px;
+    height: 100px;
+}
+
+table{
+    border-collapse: collapse;
+}
