@@ -7,6 +7,7 @@ body {
     border: 10px solid red;
     width: 100px;
     height: 100px;
+    position: fixed; top: 100; left: 10px;
 }
 
 .div5{
@@ -14,6 +15,7 @@ body {
     border: 10px solid blue;
     width: 100px;
     height: 100px;
+    position: fixed; top: 200px; left: 130px;
 }
 
 .div6{
@@ -21,6 +23,7 @@ body {
     border: 10px solid yellow;
     width: 100px;
     height: 100px;
+    position: fixed; top: 320px; left: 250px;
 }
 
 table{

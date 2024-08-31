@@ -8,13 +8,15 @@ body {
     padding: 20px;
     width: 200px;
     height: 200px;
+    position: fixed; top: 100px; left: 10px;
 }
 
 .div2 {
     background-color: yellow;
     border: 20px solid;
     width: 200px;
-    height: 200px;  
+    height: 200px;
+    position: fixed; top: 359px; left: 269px;
 }
 
 .div3{
@@ -22,7 +24,5 @@ body {
     border: 10px ridge;
     width: 200px;
     height: 200px;
-}
-table{
-    border-collapse: collapse;
+    position: fixed; top: 600px; left: 509px;
 }
