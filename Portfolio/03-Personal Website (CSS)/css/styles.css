@@ -1,3 +1,144 @@
 body {
   margin: 0;
+  background-color: gray;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  align-items: center;
+}
+
+h1{
+  font-family: 'Sacramento', cursive;
+  color: white;
+  font-size: 5.5rem;
+  margin: 50px;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  color: rgb(70, 24, 24);
+}
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(33, 33, 84);
+}
+
+hr{
+  border: none;
+  border-top: 6px dotted #EAF6F6;
+  width: 4%;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  margin: 0 auto;
+}
+
+img{
+  width: 200px; 
+  }
+
+li{
+  text-decoration: overline;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flags{
+  width: 100px;
+  border: 1px dotted red;
+}
+
+#sf{
+  background-color: gray;
+}
+
+.mex{
+  padding: 5px;
+  border-radius: 30%;
+}
+
+table{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+thead{
+  background-color: blue;
+  color: white
+}
+
+th{
+  color: white
+}
+
+a {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #000000;
+}
+
+a:visited {
+  color: #ffffff;
+}
+
+.logos{
+  width: 100px;
+  height: 100px;
+}
+
+.yo{
+  height: 200px;
+  width: 200px;
+  border-style: dashed;
+  border-radius: 100%;
+}
+
+.MexFlag{
+  height: 50px;
+  width: 100px;
+  position: absolute; top: 10px; right: 10px; 
+}
+
+.posOl{
+  position: absolute; left: 500px;
+}
+
+.divlist{
+  text-align: center;
+  width: 50%;
+  /*height: 500px;*/
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: rgb(95, 74, 74);
 }
