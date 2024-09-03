@@ -33,6 +33,7 @@ hr{
   margin-right: 100px;
   display: flex;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 img{
@@ -136,9 +137,56 @@ a:visited {
 
 .divlist{
   text-align: center;
-  width: 50%;
+  width: 70%;
   /*height: 500px;*/
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 15%;
+  margin-right: 15%;
   background-color: rgb(95, 74, 74);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.column {
+  flex: 1;
+  max-width: 300px;
+  margin: 10px;
+}
+.card {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.container {
+  padding: 15px;
+}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form{
+  border-style: dotted;
+  background-color: rgba(149, 27, 11, 0.797);
 }

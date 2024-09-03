@@ -251,13 +251,40 @@
 <div>
     <h2>Agenda</h2>
     <form action="#" method="post">
-        <label for="event">Event</label>
-        <input type="text" name="event" placeholder="Event"/>
-        <label for="free">Free time</label>
-        <input type="checkbox" name="free"/>
-        <input type="password" name = "pass" placeholder="password"/>
-        <input type="email" name="email" placeholder="email"/>
-        <input type="submit" value="Agregar"/>
+        <label for="Date">Date</label>
+        <input type="date" name="Date" placeholder="Date"/>
+        <hr>
+        <label for="timeStart">Time start</label>
+        <input type="time" name="timeStart"/>
+        <hr>
+        <label for="timeEnd">Time end</label>
+        <input type="time" name = "timeEnd"/>
+        <hr>
+        <label for="Activitie">Activitie</label>
+        <input type="text" name="Activitie" placeholder="Activitie"/>
+        <hr>
+        <label for="Place">Place</label>
+        <input type="text" name="Place" placeholder="Place"/>
+        <hr>
+        <label for="Type">Type of activite</label>
+        <select id="Type" name="Type">
+            <option value="school">School</option>
+            <option value="personal">Personal</option>
+            <option value="profecional">Profecional</option>
+            <option value="familiar">Familiar</option>
+            <option value="other">Other</option>
+        </select>
+        <hr>
+        <label for="Notes">Notes</label>
+        <textarea id="Notes" name="Notes" rows="4" cols="50"></textarea>
+        <hr>
+        <label for="Flags">Flag</label>
+        <input type="color"/>
+        <hr>
+        <label for="Free">Free/Busy</label>
+        <input style="margin-bottom: 10px;" type="checkbox" name="Free"/>
+        <hr>
+        <input type="button" placeholder="Submit"/>
     </form>
 </div>
     <a href="#">Go to top</a>

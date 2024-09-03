@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div>
+<div class="divlist">
     <table>
         <tbody>
         <tr>
@@ -37,13 +37,14 @@
     <blockquote>
         "Life is good".
     </blockquote>
+</div>
     <hr>
-
+<div class="divlist">
     <h3>Links</h3>
     <p>This are some of my Favorite <a href="destination.html" target="_blank">destinations</a>. But this is my Favorite one <a href="destination.html#piedrotas">one</a><br/>This is a link to <a href="https://www.google.com">google</a></p>
     <p>This are some the <a href="#bdays" >birthdays of my Family</a>
-    <hr>
 </div>
+<hr>
 <div class="divlist">
     <h2>Background</h2>
     <p>
@@ -51,7 +52,7 @@
     </p>
 </div>
 <hr>
-<div>
+<div class="divlist">
     <h2>Education</h2>
 
     <table>
@@ -87,8 +88,9 @@
             </tr>
         </tbody>
     </table>
-    <hr>
+    
 </div>
+<hr>
 <div class="divlist">
     <h2>Skills</h2>
     <ol type ="I" start="1">
@@ -99,7 +101,8 @@
         <li>Im i :)</li>
     </ol>
 </div>
-<div>
+<hr>
+<div class="divlist">
     <h2>Hobbies</h2>
     <h3>Favorite food</h3>
     <h4>Best</h4>
@@ -118,7 +121,8 @@
         <li>Indian</li>
     </ol>
 </div>
-<div>
+<hr>
+<div class="divlist">
     <h3>Books, Movies & Tv shows</h3>
     <ul>
         <li><span><strong>Boocks</strong></span>
@@ -176,10 +180,11 @@
             </table>
     </ul>
 </div>
-<div>
+<hr>
+<div class="divlist">
     <h2 id="bdays" id="sf">Family birthdays</h2>
 
-    <table border="1">
+    <table border="1" style="border: 3px solid;">
         <thead>
             <tr>
                 <th colspan="2">Full Name</th>
@@ -214,63 +219,93 @@
         </tfoot>
     </table>
 </div>
-<div>
+<hr>
+<div class="divlist">
     <h2>heroes/writers/musicians</h2>
-    <table border="2">
-        <thead>
-            <tr>
-                <th colspan="5"><strong>heroes/writers/musicians</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Picture</td>
-                <td>Name</td>
-                <td>Date of birth/Date of dead</td>
-                <td>Profesion</td>
-                <td>Somenthing they do</td>
-            </tr>
-
-            <tr>
-                <td><img src="./Images/Kendrick.jpg" alt="Kendrick"/></td>
-                <td>Kendrick Lamar</td>
-                <td>June 17, 1987,</td>
-                <td>Musician</td>
-                <td><p>He made the songs that are in black panther, and for that he won a oscar :)</p></td>
-            </tr>
-
-            <tr>
-                <td><img src="./Images/El travis.jpg" alt="Travis Scott"/></td>
-                <td>Travis Scott</td>
-                <td>April 30, 1991</td>
-                <td>Musician</td>
-                <td>He made the best concerts in all the world</td>
-            </tr>
-
-            <tr>
-                <td><img src="./Images/Kanye.jpg" alt="Kanye West"/></td>
-                <td>Kanye West</td>
-                <td>June 8, 1977</td>
-                <td>Musician, Productor</td>
-                <td>He made the most biggest chanche in the world of the pop and rap</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="./Images/Kendrick.jpg" alt="Kendrick Lamar">
+            <div class="container">
+              <h2>Kendrick Lamar</h2>
+              <p class="title">Musician</p>
+              <p>June 17, 1987</p>
+              <p>He made the songs that are in Black Panther, and for that, he won an Oscar :)</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="./Images/El travis.jpg" alt="Travis Scott">
+            <div class="container">
+              <h2>Travis Scott</h2>
+              <p class="title">Musician</p>
+              <p>April 30, 1991</p>
+              <p>He made the best concerts in the world.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img style="height: 300px;" src="./Images/Kanye.jpg" alt="Kanye West">
+            <div class="container">
+              <h2>Kanye West</h2>
+              <p class="title">Musician, Producer</p>
+              <p>June 8, 1977</p>
+              <p>He made the biggest change in the world of pop and rap.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
 
 </div>
-<div>
+<hr>
+<div class="divlist">
     <h2>Agenda</h2>
     <form action="#" method="post">
-        <label for="event">Event</label>
-        <input type="text" name="event" placeholder="Event"/>
-        <label for="free">Free time</label>
-        <input type="checkbox" name="free"/>
-        <input type="password" name = "pass" placeholder="password"/>
-        <input type="email" name="email" placeholder="email"/>
-        <input type="submit" value="Agregar"/>
+        <label for="Date">Date</label>
+        <input type="date" name="Date" placeholder="Date"/>
+        <hr>
+        <label for="timeStart">Time start</label>
+        <input type="time" name="timeStart"/>
+        <hr>
+        <label for="timeEnd">Time end</label>
+        <input type="time" name = "timeEnd"/>
+        <hr>
+        <label for="Activitie">Activitie</label>
+        <input type="text" name="Activitie" placeholder="Activitie"/>
+        <hr>
+        <label for="Place">Place</label>
+        <input type="text" name="Place" placeholder="Place"/>
+        <hr>
+        <label for="Type">Type of activite</label>
+        <select id="Type" name="Type">
+            <option value="school">School</option>
+            <option value="personal">Personal</option>
+            <option value="profecional">Profecional</option>
+            <option value="familiar">Familiar</option>
+            <option value="other">Other</option>
+        </select>
+        <hr>
+        <label for="Notes">Notes</label>
+        <textarea id="Notes" name="Notes" rows="4" cols="50"></textarea>
+        <hr>
+        <label for="Flags">Flag</label>
+        <input type="color"/>
+        <hr>
+        <label for="Free">Free/Busy</label>
+        <input style="margin-bottom: 10px;" type="checkbox" name="Free"/>
+        <hr>
+        <input style="width: 30; height: 15px; margin-bottom: 10px;" type="button" placeholder="Submit" name="Submit" value="Submit"/>
     </form>
 </div>
+<hr>
+<div class="divlist">
     <a href="#">Go to top</a>
+</div>
 
 
 </body>

@@ -31,7 +31,7 @@ This exercise will guide us to learn most of the html basic elements. This guide
 
 - Find the logo of your schools and place them in front of each entry you named them above.
 - Find an image of a Books, Movies & TV Show and place it at the beginning of each category
-- Add a picture of yourself and add it by your name at the beginning.
+- Add a picture of yourself and add it   by your name at the beginning.
 - Fix the layout to have image side by side with basic info using tables.
 
 ---
