@@ -34,6 +34,7 @@ hr{
   display: flex;
   margin: 0 auto;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 img{
@@ -135,15 +136,6 @@ a:visited {
   position: absolute; left: 500px;
 }
 
-.divlist{
-  text-align: center;
-  width: 70%;
-  /*height: 500px;*/
-  margin-left: 15%;
-  margin-right: 15%;
-  background-color: rgb(95, 74, 74);
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -189,4 +181,72 @@ a:visited {
 form{
   border-style: dotted;
   background-color: rgba(149, 27, 11, 0.797);
+  margin: 10px;
+  padding: 20px; 
+}
+
+label{
+  display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+select,
+textarea,
+input[type="checkbox"],
+input[type="button"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #e6f0ff; /* Light blue background for inputs */
+    box-sizing: border-box;
+}
+
+input[type="color"]{
+  height: 30px;
+  width: 80%;
+  border-radius: 8px;
+}
+
+input[type="button"]:hover {
+  background-color: #923b10;
+}
+
+.section {
+  background-color: rgb(95, 74, 74); 
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 70%;
+  /*height: 500px;*/
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.sectionEven{
+  background-color: #2b070b;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 70%;
+  /*height: 500px;*/
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.mountain{
+  height: 100%;
+  width: 100%;
+}
+
+.nubes{
+  position: sticky; top: 100px;
 }
