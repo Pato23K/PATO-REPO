@@ -1,27 +1,39 @@
-/*
-    Fibonacci Sequence - Enter a number and have the program
-    generate the Fibonacci sequence to that number or to the Nth number.
-*/
-// This array will keep memory of the previous fibonacci numbers
 var memo = {};
+
 function fibonacci() {
   "use strict";
-  var n = document.getElementById("num").value;
+  var n = parseInt(document.getElementById("num").value);
+  
+  console.log("Número introducido: ", n);
+
+  if (isNaN(n) || n < 0) {
+    document.getElementById("fibonacciLbl").innerHTML = "Please enter a valid positive integer.";
+    console.log("Número no válido.");
+    return;
+  }
+
   var val = f(n);
+  
+  console.log("Fibonacci(" + n + ") = " + val);
+
+  document.getElementById("fibonacciLbl").innerHTML = "Fibonacci(" + n + ") = " + val;
+  
   return val;
 }
 
 function f(n) {
-  var value;
-  // Check if the memory array already contains the requested number
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  
   if (memo.hasOwnProperty(n)) {
-    value = memo[n];
-  } else {
-    //TODO: Implement the fibonacci function here!
-
-    memo[n] = value;
+    return memo[n];
   }
+
+  var value = f(n - 1) + f(n - 2);
+  
+  memo[n] = value;
 
   return value;
 }
-console.log(fibonacci(15));
+
+document.getElementById("btn").onclick = fibonacci;
