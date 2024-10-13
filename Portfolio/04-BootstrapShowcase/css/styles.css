@@ -1,0 +1,355 @@
+body {
+  margin: 0;
+  background-color: gray;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  align-items: center;
+}
+
+.mountain{
+  height: 100%;
+  width: 100%;
+}
+
+.nubes{
+  position: sticky; top: 100px;
+  top: 100px;
+  left: 45%;
+  display: grid;
+  place-items: center;
+}
+
+h1{
+  font-family: 'Sacramento', cursive;
+  color: white;
+  font-size: 5.5rem;
+  margin: 50px;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  color: rgb(70, 24, 24);
+}
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(33, 33, 84);
+}
+
+.hrs{
+  border: none;
+  border-top: 6px dotted #000000;
+  width: 4%;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.img{
+  width: 100%; /* O ajusta a una medida fija si prefieres */
+  max-width: 400px; /* Evita que la imagen sea más grande que el contenedor */
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+
+li{
+  text-decoration: overline;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flags{
+  width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#sf{
+  background-color: gray;
+}
+
+.mex{
+  padding: 5px;
+  border-radius: 30%;
+}
+
+table{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+thead{
+  background-color: blue;
+  color: white
+}
+
+th{
+  color: white
+}
+
+/* Ajustes para los enlaces de navegación */
+a {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #FFD700; /* Color dorado al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* Ajuste específico para el botón Destinations */
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFD700;
+}
+
+a:active {
+  color: #000000;
+}
+
+a:visited {
+  color: #ffffff;
+}
+
+.logos{
+  width: 100px;
+  height: 100px;
+}
+
+.yo{
+  height: 200px;
+  width: 200px;
+  border-style: dashed;
+  border-radius: 100%;
+}
+
+.MexFlag {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100px; /* Ajusta el tamaño según lo que necesites */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+
+.posOl{
+  position: absolute; left: 500px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.column {
+  flex: 1;
+  max-width: 300px;
+  margin: 10px;
+}
+.card {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.container {
+  padding: 15px;
+}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #3e8e41; /* Cambia el color al pasar el mouse */
+}
+
+form{
+  border-style: dotted;
+  background-color: rgba(149, 27, 11, 0.797);
+  margin: 10px;
+  padding: 20px; 
+}
+
+label{
+  display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+select,
+textarea,
+input[type="checkbox"],
+input[type="button"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #e6f0ff; /* Light blue background for inputs */
+    box-sizing: border-box;
+}
+
+input[type="color"]{
+  height: 30px;
+  width: 80%;
+  border-radius: 8px;
+}
+
+input[type="button"]:hover {
+  background-color: #923b10;
+}
+
+.section {
+  background-color: rgb(95, 74, 74); 
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 70%;
+  /*height: 500px;*/
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.sectionEven{
+  background-color: #52292e;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 70%;
+  /*height: 500px;*/
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+/* Example: Changing navbar brand color */
+.navbar-brand {
+  color: #FFD700 !important; /* Using !important to override Bootstrap */
+}
+
+.destination {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imgB {
+  width: 50%;
+  width: 200px;
+  max-width: 400px; 
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.nubeDiv{
+  place-items: center;
+}
+
+img{
+  width: 200px;
+}
+
+.progress-bar {
+  background-color: #28a745; /* Verde fuerte */
+}
+
+.custom-spinner {
+  display: inline-block;
+  position: relative;
+}
+
+.spinner-image {
+  width: 50px; /* Ajusta el tamaño de la imagen */
+  height: 50px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.form-floating label {
+  background-color: #fff; /* Fondo blanco para el label */
+  padding: 0 10px; /* Espacio alrededor del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: 0.2s; /* Efecto de transición suave */
+}
+
+.form-floating input:focus + label,
+.form-floating input:not(:placeholder-shown) + label {
+  top: -20px; /* Mueve el label hacia arriba al enfocar o cuando hay texto */
+  left: 10px; /* Alinea el label con el input */
+  font-size: 12px; /* Tamaño del font cuando el label está arriba */
+  color: #495057; /* Cambia el color del label */
+}
+
+.form-floating input {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra en el input */
+  border-radius: 5px; /* Bordes redondeados para el input */
+}
