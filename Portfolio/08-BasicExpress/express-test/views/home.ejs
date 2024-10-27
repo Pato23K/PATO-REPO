@@ -1,0 +1,50 @@
+<%- include("./partials/header"); -%>
+    <img src="./img/historia-y-curiosidades-de-la-bandera-de-mexico.jpg.webp" alt="Mexico flag"/>
+    <h1>BMI Calculator on EJS</h1>
+
+    <h3>Hello <%= name %> <%= lastname %> </h3>
+    <p><a href="/joke">Tell me a joke</a>
+        <% if(locals.joke) {%>
+            <br/><%= joke %>
+        <% } %>    
+    </p>
+    <hr/>
+    <h3>Check if word is in dictionary</h3>
+    <form action="/check" method="post">
+        <input type="text" name="word" placeholder="word to check"/>
+        <button type="submit" name="submit">find</button>
+    </form>
+    <% if(locals.checked){ %>
+        <br><%= checked %>
+    <% } %>
+
+
+    <form action="/" method="post">
+        <input type="number" name="weight" placeholder="weight"/>
+        <input type="number" name="height" placeholder="height"/>
+        <input type="submit" name="submit" placeholder="submit"/>
+    </form>
+
+    <form action="/shop" method="post">
+        <input type="text" name="item" placeholder="Shpping item"/>
+        <button type="submit" name="submit">shop</button>
+    </form>
+
+    <h2>shopping list</h2>
+
+    <ul>
+        <% shopping.forEach((value, index) =>{ %>
+            <li> <a href="/delete/<%=index%>/country/123"><i class="fa-solid fa-eraser"></i></a> <%= value %> </li>
+        <% }) %>
+    </ul>
+    <% if (locals.students && students.length !=0) {
+        var found = "we found students!";
+        %>
+        <%= found %>
+        <%- include("partials/students", {listTitle: "List of students", records: students}); -%>
+        <%- include("partials/students", {listTitle: "List of Teachers", records: students}); -%>
+    <% } else{%>
+        <p>There was no students reported</p>
+    <% } %>
+
+<%- include("./partials/footer"); -%>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Test</title>
+</head>
+
+<body>
+    <% if (locals.error) { %>
+    <h3 style="color: red;">
+        <%= error %>
+    </h3>
+    <% } %>
+
+    <h2>Greeting Section</h2>
+    <form action="/greet" method="get">
+        Register:
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="submit" value="Greet">
+    </form>
+
+    <h3>Registered Users</h3>
+    <ul id="greetingList">
+        <% if (locals.names && locals.names.length) { %>
+        <% locals.names.forEach((name, index) => { %>
+        <li>
+            <a href="/wazzup?name=<%= name %>"><%= name %></a>
+        </li>
+        <% }) %>
+        <% } else { %>
+        <li>No users registered yet.</li>
+        <% } %>
+    </ul>
+
+    <h2>TODO List</h2>
+    <form action="/task" method="post">
+        <input type="text" name="task" placeholder="Enter a new task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul id="todoList">
+        <% if (locals.tasks && locals.tasks.length) { %>
+        <% locals.tasks.forEach((task, index) => { %>
+        <li>
+            <%= task %>
+            <a href="/task/delete/<%= index %>" onclick="return confirm('Delete this task?')">Delete</a>
+            <!-- Arrows for reordering -->
+            <% if (index > 0) { %>
+            <a href="/task/up/<%= index %>">↑</a>
+            <% } %>
+            <% if (index < locals.tasks.length - 1) { %>
+            <a href="/task/down/<%= index %>">↓</a>
+            <% } %>
+        </li>
+        <% }) %>
+        <% } else { %>
+        <li>No tasks in the list yet.</li>
+        <% } %>
+    </ul>
+
+</body>
+
+</html>

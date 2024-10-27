@@ -1,0 +1,9 @@
+
+<h2><%= listTitle %></h2>
+<% records.forEach((entry, index) =>{ %>
+    <div>
+        <h1><%= index + 1 %>. <%= entry.name %> <%= entry.lastname %> (ID: <%= entry.id %>)</h1>
+        <h3><%= entry.YOB %></h3>
+        <hr>
+    </div>
+<% }); %>

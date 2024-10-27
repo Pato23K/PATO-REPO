@@ -1,0 +1,9 @@
+<%- include("./partials/header"); -%>
+    <p>here i am</p>
+    <% if (locals.students && students.length !=0) {
+        var found = "we found students!";
+        %>
+        <%= found %>
+        <%- include("partials/students"); -%>
+    <% } %>
+<%- include("./partials/footer"); -%>
