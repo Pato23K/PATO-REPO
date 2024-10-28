@@ -50,13 +50,13 @@
 
     <script>
         let showDrivers = true;
-    
+
         const fetchDrivers = () => {
             fetch('/drivers')
                 .then(response => response.json())
                 .then(data => {
                     const listContainer = document.getElementById('list-container');
-                    listContainer.innerHTML = '';
+                    listContainer.innerHTML = ''; // Clear previous entries
                     data.forEach(driver => {
                         const li = document.createElement('li');
                         li.innerHTML = `
@@ -70,7 +70,7 @@
                     });
                 });
         };
-    
+
         const fetchTeams = () => {
             fetch('/teams')
                 .then(response => response.json())
@@ -84,11 +84,11 @@
                     });
                 });
         };
-    
+
         fetchDrivers();
-    
+
         document.getElementById('toggle-view').addEventListener('click', () => {
-            showDrivers = !showDrivers;
+            showDrivers = !showDrivers; // Toggle the view
             const buttonText = showDrivers ? 'Show by Teams' : 'Show by Drivers';
             document.getElementById('toggle-view').textContent = buttonText;
             if (showDrivers) {
@@ -98,7 +98,5 @@
             }
         });
     </script>
-    
-
 </body>
 </html>

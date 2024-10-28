@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather report</title>
+    <title>Weather Report</title>
 </head>
 
 <body>
-    <form action="/" method="post">
-        <label for="cityName">City Name</label>
-        <input id="cityName" type="text" name="cityName">
+    <form action="/weather" method="post">
+        <label for="cityName">City Name:</label>
+        <input id="cityName" type="text" name="cityName" required>
         <button type="submit">Go</button>
     </form>
 </body>

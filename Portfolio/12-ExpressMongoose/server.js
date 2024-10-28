@@ -11,52 +11,81 @@ app.set("view engine", "ejs");
 const mongoUrl = "mongodb://127.0.0.1:27017/f1";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Definition of a schema
 const teamSchema = new mongoose.Schema({
-  id: Number,
-  name: String,
-  nationality: String,
-  url: String,
+    name: String,
+    nationality: String,
+    url: String,
 });
 teamSchema.set("strictQuery", true);
 
 const driverSchema = new mongoose.Schema({
-  num: Number,
-  code: String,
-  forename: String,
-  surname: String,
-  dob: Date,
-  nationality: String,
-  url: String,
-  team: teamSchema,
+    num: Number,
+    code: String,
+    forename: String,
+    surname: String,
+    dob: Date,
+    nationality: String,
+    url: String,
+    current_team: String,
 });
 driverSchema.set("strictQuery", true);
 
 const Team = mongoose.model("Team", teamSchema);
 const Driver = mongoose.model("Driver", driverSchema);
 
-let countries = [
-  { code: "ENG", label: "England" },
-  { code: "SPA", label: "Spain" },
-  { code: "GER", label: "Germany" },
-  { code: "FRA", label: "France" },
-  { code: "MEX", label: "Mexico" },
-  { code: "AUS", label: "Australia" },
-  { code: "FIN", label: "Finland" },
-  { code: "NET", label: "Netherlands" },
-  { code: "CAN", label: "Canada" },
-  { code: "MON", label: "Monaco" },
-  { code: "THA", label: "Thailand" },
-  { code: "JAP", label: "Japan" },
-  { code: "CHI", label: "China" },
-  { code: "USA", label: "USA" },
-  { code: "DEN", label: "Denmark" },
-];
+// Middleware para cargar datos
+const loadData = (req, res, next) => {
+    Promise.all([
+        Driver.find({}),
+        Team.find({})
+    ])
+    .then(([drivers, teams]) => {
+        res.locals.drivers = drivers; 
+        res.locals.teams = teams;
+        next();
+    })
+    .catch(err => {
+        console.error(err);
+        res.status(500).send("Error loading data");
+    });
+};
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/html/index.html");
+app.get("/", loadData, (req, res) => {
+    res.render("index", { drivers: res.locals.drivers, teams: res.locals.teams });
+});
+
+app.post("/add-driver", (req, res) => {
+    const driver = new Driver(req.body);
+    driver.save((err) => {
+        if (err) return res.status(500).send(err);
+        res.redirect("/");
+    });
+});
+
+app.put("/update-driver/:id", (req, res) => {
+    const driverId = req.params.id;
+    const updatedData = req.body;
+
+    Driver.findByIdAndUpdate(driverId, updatedData, { new: true }, (err, updatedDriver) => {
+        if (err) return res.status(500).send(err);
+        res.json(updatedDriver);
+    });
+});
+
+app.get("/drivers", (req, res) => {
+    Driver.find({}, (err, drivers) => {
+        if (err) return res.status(500).send(err);
+        res.json(drivers);
+    });
+});
+
+app.get("/teams", (req, res) => {
+    Team.find({}, (err, teams) => {
+        if (err) return res.status(500).send(err);
+        res.json(teams);
+    });
 });
 
 app.listen(3000, (err) => {
-  console.log("Listening on port 3000");
+    console.log("Listening on port 3000");
 });
